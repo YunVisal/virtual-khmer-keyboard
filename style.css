@@ -52,7 +52,6 @@ body {
 .key {
     background-color: black;
     color: white;
-    padding: .5rem;
     border-radius: 10px;
     cursor: pointer;
     padding: 20px 0;
@@ -66,4 +65,56 @@ body {
 
 .key:hover {
     color: #aaa;
+}
+
+.text-input-container {
+    width: 100%;
+    margin: 1rem 0;
+}
+
+.text-input {
+    width: 100%;
+    outline: none;
+    border: none;
+    background-color: #eee;
+    border-radius: 10px;
+    color: black;
+    font-size: 24px;
+    padding: 1rem;
+}
+
+@media only screen and (max-width: 600px) {
+    .keyboard {
+        grid-row-gap: 2px;
+        padding: .2rem;
+    }
+
+    .key {
+        padding: 5px 0;
+        border-radius: 5px;
+    }
+
+    .key .kh-label {
+        font-size: 10px;
+    }
+
+    .keyboard .row-1 {
+        grid-column-gap: 2px;
+    }
+
+    .keyboard .row-2 {
+        grid-column-gap: 2px;
+    }
+
+    .keyboard .row-3 {
+        grid-column-gap: 2px;
+    }
+
+    .keyboard .row-4 {
+        grid-column-gap: 2px;
+    }
+
+    .keyboard .row-5 {
+        grid-column-gap: 2px;
+    }
 }

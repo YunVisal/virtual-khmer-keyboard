@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         "delete": {
             domId: "del_key",
-            handler: function () { console.log("delete") }
+            handler: onDeleteKeyClick
         },
         "tab": {
             domId: "tab_key",
@@ -39,6 +39,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     var inputString = "";
+    const textInput = document.getElementById("textInput");
+    textInput.value = inputString;
 
     const keyboard = document.getElementById("keyboard");
     function changeKey(characters) {
@@ -73,6 +75,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function onInputKeyClick(char) {
         inputString += char;
+        textInput.value = inputString;
     }
 
     function onTabKeyClick() {
@@ -85,6 +88,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function onSpaceKeyClick() {
         onInputKeyClick(" ")
+    }
+
+    function onDeleteKeyClick() {
+        inputString = inputString.substring(0, inputString.length - 1);
+        textInput.value = inputString;
     }
 
     var isShift = false;
