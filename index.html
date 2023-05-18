@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="app.js"></script>
     <title>Khmer Virtual Keyboard</title>
@@ -12,207 +13,381 @@
 </head>
 
 <body>
-    <div class="text-input-container">
-        <textarea class="text-input" id="textInput" cols="30" rows="10" placeholder="Enter the text"></textarea>
-    </div>
-    <div class="keyboard" id="keyboard">
-        <div class="row-1">
-            <div class="key">
-                <p class="kh-label">«</p>
+    <main>
+        <div class="text-input-container">
+            <textarea class="text-input" id="textInput" cols="30" rows="10" placeholder="Enter the text"></textarea>
+        </div>
+        <div class="desktop-keyboard keyboard" id="keyboard">
+            <div class="row-1">
+                <div class="key">
+                    <p class="kh-label">«</p>
+                </div>
+                <div class="key">
+                    <p class="kh-label">១</p>
+                </div>
+                <div class="key">
+                    <p class="kh-label">២</p>
+                </div>
+                <div class="key">
+                    <p class="kh-label">៣</p>
+                </div>
+                <div class="key">
+                    <p class="kh-label">៤</p>
+                </div>
+                <div class="key">
+                    <p class="kh-label">៥</p>
+                </div>
+                <div class="key">
+                    <p class="kh-label">៦</p>
+                </div>
+                <div class="key">
+                    <p class="kh-label">៧</p>
+                </div>
+                <div class="key">
+                    <p class="kh-label">៨</p>
+                </div>
+                <div class="key">
+                    <p class="kh-label">៩</p>
+                </div>
+                <div class="key">
+                    <p class="kh-label">០</p>
+                </div>
+                <div class="key">
+                    <p class="kh-label">ឥ</p>
+                </div>
+                <div class="key">
+                    <p class="kh-label">ឲ</p>
+                </div>
+                <div class="key">
+                    <p class="kh-label">delete</p>
+                </div>
             </div>
-            <div class="key">
-                <p class="kh-label">១</p>
+            <div class="row-2">
+                <div class="key">
+                    <p class="kh-label">tab</p>
+                </div>
+                <div class="key">
+                    <p class="kh-label">ឆ</p>
+                </div>
+                <div class="key">
+                    <p class="kh-label">ឹ</p>
+                </div>
+                <div class="key">
+                    <p class="kh-label">េ</p>
+                </div>
+                <div class="key">
+                    <p class="kh-label">រ</p>
+                </div>
+                <div class="key">
+                    <p class="kh-label">ត</p>
+                </div>
+                <div class="key">
+                    <p class="kh-label">យ</p>
+                </div>
+                <div class="key">
+                    <p class="kh-label">ុ</p>
+                </div>
+                <div class="key">
+                    <p class="kh-label">ិ</p>
+                </div>
+                <div class="key">
+                    <p class="kh-label">ោ</p>
+                </div>
+                <div class="key">
+                    <p class="kh-label">ផ</p>
+                </div>
+                <div class="key">
+                    <p class="kh-label">ៀ</p>
+                </div>
+                <div class="key">
+                    <p class="kh-label">ឪ</p>
+                </div>
+                <div class="key">
+                    <p class="kh-label">ឭ</p>
+                </div>
             </div>
-            <div class="key">
-                <p class="kh-label">២</p>
+            <div class="row-3">
+                <div class="key">
+                    <p class="kh-label">caps lock</p>
+                </div>
+                <div class="key">
+                    <p class="kh-label">ា</p>
+                </div>
+                <div class="key">
+                    <p class="kh-label">ស</p>
+                </div>
+                <div class="key">
+                    <p class="kh-label">ដ</p>
+                </div>
+                <div class="key">
+                    <p class="kh-label">ថ</p>
+                </div>
+                <div class="key">
+                    <p class="kh-label">ង</p>
+                </div>
+                <div class="key">
+                    <p class="kh-label">ហ</p>
+                </div>
+                <div class="key">
+                    <p class="kh-label">្</p>
+                </div>
+                <div class="key">
+                    <p class="kh-label">ក</p>
+                </div>
+                <div class="key">
+                    <p class="kh-label">ល</p>
+                </div>
+                <div class="key">
+                    <p class="kh-label">ើ</p>
+                </div>
+                <div class="key">
+                    <p class="kh-label">់</p>
+                </div>
+                <div class="key">
+                    <p class="kh-label">enter</p>
+                </div>
             </div>
-            <div class="key">
-                <p class="kh-label">៣</p>
+            <div class="row-4">
+                <div class="key" id="shift_key">
+                    <p class="kh-label">shift</p>
+                </div>
+                <div class="key">
+                    <p class="kh-label">ឋ</p>
+                </div>
+                <div class="key">
+                    <p class="kh-label">ខ</p>
+                </div>
+                <div class="key">
+                    <p class="kh-label">ច</p>
+                </div>
+                <div class="key">
+                    <p class="kh-label">វ</p>
+                </div>
+                <div class="key">
+                    <p class="kh-label">ប</p>
+                </div>
+                <div class="key">
+                    <p class="kh-label">ន</p>
+                </div>
+                <div class="key">
+                    <p class="kh-label">ម</p>
+                </div>
+                <div class="key">
+                    <p class="kh-label">ឦ</p>
+                </div>
+                <div class="key">
+                    <p class="kh-label">។</p>
+                </div>
+                <div class="key">
+                    <p class="kh-label">៊</p>
+                </div>
+                <div class="key">
+                    <p class="kh-label"></p>
+                </div>
             </div>
-            <div class="key">
-                <p class="kh-label">៤</p>
-            </div>
-            <div class="key">
-                <p class="kh-label">៥</p>
-            </div>
-            <div class="key">
-                <p class="kh-label">៦</p>
-            </div>
-            <div class="key">
-                <p class="kh-label">៧</p>
-            </div>
-            <div class="key">
-                <p class="kh-label">៨</p>
-            </div>
-            <div class="key">
-                <p class="kh-label">៩</p>
-            </div>
-            <div class="key">
-                <p class="kh-label">០</p>
-            </div>
-            <div class="key">
-                <p class="kh-label">ឥ</p>
-            </div>
-            <div class="key">
-                <p class="kh-label">ឲ</p>
-            </div>
-            <div class="key">
-                <p class="kh-label">delete</p>
+            <div class="row-5">
+                <div class="key">
+                    <p class="kh-label"></p>
+                </div>
+                <div class="key">
+                    <p class="kh-label"></p>
+                </div>
+                <div class="key">
+                    <p class="kh-label"></p>
+                </div>
+                <div class="key" id="alt_key">
+                    <p class="kh-label">Alt</p>
+                </div>
+                <div class="key">
+                    <p class="kh-label">Space</p>
+                </div>
+                <div class="key">
+                    <p class="kh-label">Alt</p>
+                </div>
+                <div class="key">
+                    <p class="kh-label"></p>
+                </div>
+                <div class="key">
+                    <p class="kh-label"></p>
+                </div>
+                <div class="key">
+                    <p class="kh-label">Ctrl</p>
+                </div>
             </div>
         </div>
-        <div class="row-2">
-            <div class="key">
-                <p class="kh-label">tab</p>
+
+        <div class="mobile-keyboard keyboard" id="keyboard">
+            <div class="row-1">
+                <div class="key">
+                    <p class="kh-label">១</p>
+                </div>
+                <div class="key">
+                    <p class="kh-label">២</p>
+                </div>
+                <div class="key">
+                    <p class="kh-label">៣</p>
+                </div>
+                <div class="key">
+                    <p class="kh-label">៤</p>
+                </div>
+                <div class="key">
+                    <p class="kh-label">៥</p>
+                </div>
+                <div class="key">
+                    <p class="kh-label">៦</p>
+                </div>
+                <div class="key">
+                    <p class="kh-label">៧</p>
+                </div>
+                <div class="key">
+                    <p class="kh-label">៨</p>
+                </div>
+                <div class="key">
+                    <p class="kh-label">៩</p>
+                </div>
+                <div class="key">
+                    <p class="kh-label">០</p>
+                </div>
+                <div class="key">
+                    <p class="kh-label">ឥ</p>
+                </div>
+                <div class="key">
+                    <p class="kh-label">ឲ</p>
+                </div>
             </div>
-            <div class="key">
-                <p class="kh-label">ឆ</p>
+            <div class="row-2">
+                <div class="key">
+                    <p class="kh-label">ឆ</p>
+                </div>
+                <div class="key">
+                    <p class="kh-label">ឹ</p>
+                </div>
+                <div class="key">
+                    <p class="kh-label">េ</p>
+                </div>
+                <div class="key">
+                    <p class="kh-label">រ</p>
+                </div>
+                <div class="key">
+                    <p class="kh-label">ត</p>
+                </div>
+                <div class="key">
+                    <p class="kh-label">យ</p>
+                </div>
+                <div class="key">
+                    <p class="kh-label">ុ</p>
+                </div>
+                <div class="key">
+                    <p class="kh-label">ិ</p>
+                </div>
+                <div class="key">
+                    <p class="kh-label">ោ</p>
+                </div>
+                <div class="key">
+                    <p class="kh-label">ផ</p>
+                </div>
+                <div class="key">
+                    <p class="kh-label">ៀ</p>
+                </div>
+                <div class="key">
+                    <p class="kh-label">ឪ</p>
+                </div>
             </div>
-            <div class="key">
-                <p class="kh-label">ឹ</p>
+            <div class="row-3">
+                <div class="key">
+                    <p class="kh-label">ា</p>
+                </div>
+                <div class="key">
+                    <p class="kh-label">ស</p>
+                </div>
+                <div class="key">
+                    <p class="kh-label">ដ</p>
+                </div>
+                <div class="key">
+                    <p class="kh-label">ថ</p>
+                </div>
+                <div class="key">
+                    <p class="kh-label">ង</p>
+                </div>
+                <div class="key">
+                    <p class="kh-label">ហ</p>
+                </div>
+                <div class="key">
+                    <p class="kh-label">្</p>
+                </div>
+                <div class="key">
+                    <p class="kh-label">ក</p>
+                </div>
+                <div class="key">
+                    <p class="kh-label">ល</p>
+                </div>
+                <div class="key">
+                    <p class="kh-label">ើ</p>
+                </div>
+                <div class="key">
+                    <p class="kh-label">់</p>
+                </div>
+                <div class="key">
+                    <p class="kh-label">ឭ</p>
+                </div>
             </div>
-            <div class="key">
-                <p class="kh-label">េ</p>
+            <div class="row-4">
+                <div class="key" id="shift_key">
+                    <p class="kh-label">&uarr;</p>
+                </div>
+                <div class="key">
+                    <p class="kh-label">ឋ</p>
+                </div>
+                <div class="key">
+                    <p class="kh-label">ខ</p>
+                </div>
+                <div class="key">
+                    <p class="kh-label">ច</p>
+                </div>
+                <div class="key">
+                    <p class="kh-label">វ</p>
+                </div>
+                <div class="key">
+                    <p class="kh-label">ប</p>
+                </div>
+                <div class="key">
+                    <p class="kh-label">ន</p>
+                </div>
+                <div class="key">
+                    <p class="kh-label">ម</p>
+                </div>
+                <div class="key">
+                    <p class="kh-label">ឦ</p>
+                </div>
+                <div class="key">
+                    <p class="kh-label">។</p>
+                </div>
+                <div class="key">
+                    <p class="kh-label">៊</p>
+                </div>
+                <div class="key">
+                    <p class="kh-label"><i class="material-icons">&#xe14a;</i></p>
+                </div>
             </div>
-            <div class="key">
-                <p class="kh-label">រ</p>
-            </div>
-            <div class="key">
-                <p class="kh-label">ត</p>
-            </div>
-            <div class="key">
-                <p class="kh-label">យ</p>
-            </div>
-            <div class="key">
-                <p class="kh-label">ុ</p>
-            </div>
-            <div class="key">
-                <p class="kh-label">ិ</p>
-            </div>
-            <div class="key">
-                <p class="kh-label">ោ</p>
-            </div>
-            <div class="key">
-                <p class="kh-label">ផ</p>
-            </div>
-            <div class="key">
-                <p class="kh-label">ៀ</p>
-            </div>
-            <div class="key">
-                <p class="kh-label">ឪ</p>
-            </div>
-            <div class="key">
-                <p class="kh-label">ឭ</p>
+            <div class="row-5">
+                <div class="key">
+                    <p class="kh-label"></p>
+                </div>
+                <div class="key">
+                    <p class="kh-label"></p>
+                </div>
+                <div class="key">
+                    <p class="kh-label">Space</p>
+                </div>
+                <div class="key">
+                    <p class="kh-label"></p>
+                </div>
+                <div class="key">
+                    <p class="kh-label">&crarr;</p>
+                </div>
             </div>
         </div>
-        <div class="row-3">
-            <div class="key">
-                <p class="kh-label">caps lock</p>
-            </div>
-            <div class="key">
-                <p class="kh-label">ា</p>
-            </div>
-            <div class="key">
-                <p class="kh-label">ស</p>
-            </div>
-            <div class="key">
-                <p class="kh-label">ដ</p>
-            </div>
-            <div class="key">
-                <p class="kh-label">ថ</p>
-            </div>
-            <div class="key">
-                <p class="kh-label">ង</p>
-            </div>
-            <div class="key">
-                <p class="kh-label">ហ</p>
-            </div>
-            <div class="key">
-                <p class="kh-label">្</p>
-            </div>
-            <div class="key">
-                <p class="kh-label">ក</p>
-            </div>
-            <div class="key">
-                <p class="kh-label">ល</p>
-            </div>
-            <div class="key">
-                <p class="kh-label">ើ</p>
-            </div>
-            <div class="key">
-                <p class="kh-label">់</p>
-            </div>
-            <div class="key">
-                <p class="kh-label">enter</p>
-            </div>
-        </div>
-        <div class="row-4">
-            <div class="key" id="shift_key">
-                <p class="kh-label">shift</p>
-            </div>
-            <div class="key">
-                <p class="kh-label">ឋ</p>
-            </div>
-            <div class="key">
-                <p class="kh-label">ខ</p>
-            </div>
-            <div class="key">
-                <p class="kh-label">ច</p>
-            </div>
-            <div class="key">
-                <p class="kh-label">វ</p>
-            </div>
-            <div class="key">
-                <p class="kh-label">ប</p>
-            </div>
-            <div class="key">
-                <p class="kh-label">ន</p>
-            </div>
-            <div class="key">
-                <p class="kh-label">ម</p>
-            </div>
-            <div class="key">
-                <p class="kh-label">ឦ</p>
-            </div>
-            <div class="key">
-                <p class="kh-label">។</p>
-            </div>
-            <div class="key">
-                <p class="kh-label">៊</p>
-            </div>
-            <div class="key">
-                <p class="kh-label"></p>
-            </div>
-        </div>
-        <div class="row-5">
-            <div class="key">
-                <p class="kh-label">Ctrl</p>
-            </div>
-            <div class="key">
-                <p class="kh-label"></p>
-            </div>
-            <div class="key">
-                <p class="kh-label"></p>
-            </div>
-            <div class="key" id="alt_key">
-                <p class="kh-label">Alt</p>
-            </div>
-            <div class="key">
-                <p class="kh-label">Space</p>
-            </div>
-            <div class="key">
-                <p class="kh-label">Alt</p>
-            </div>
-            <div class="key">
-                <p class="kh-label"></p>
-            </div>
-            <div class="key">
-                <p class="kh-label"></p>
-            </div>
-            <div class="key">
-                <p class="kh-label">Ctrl</p>
-            </div>
-        </div>
-    </div>
+    </main>
 </body>
 
 </html>

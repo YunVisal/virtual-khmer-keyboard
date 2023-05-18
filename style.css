@@ -6,61 +6,127 @@
     box-sizing: border-box;
 }
 
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
 body {
     font-family: 'Noto Sans Khmer', sans-serif;
 }
 
+main {
+    height: 100%;
+    position: relative;
+}
+
 .keyboard {
     width: 100%;
+    background-color: #707070;
+    position: fixed;
+    bottom: 0;
+}
+
+.desktop-keyboard.keyboard {
+    grid-row-gap: 10px;
     padding: 1rem;
     border-radius: 10px;
     display: grid;
-    grid-row-gap: 10px;
-    background-color: #707070;
 }
 
-.keyboard .row-1 {
+.mobile-keyboard.keyboard {
+    grid-row-gap: 5px;
+    padding: .5rem;
+    border-radius: 5px;
+    display: none;
+}
+
+.row-1,
+.row-2,
+.row-3,
+.row-4,
+.row-5 {
     display: grid;
+}
+
+.desktop-keyboard .row-1 {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1.5fr;
     grid-column-gap: 10px;
 }
 
-.keyboard .row-2 {
-    display: grid;
+.desktop-keyboard .row-2 {
     grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-column-gap: 10px;
 }
 
-.keyboard .row-3 {
-    display: grid;
+.desktop-keyboard .row-3 {
     grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 2fr;
     grid-column-gap: 10px;
 }
 
-.keyboard .row-4 {
-    display: grid;
+.desktop-keyboard .row-4 {
     grid-template-columns: 2.5fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 2.5fr;
     grid-column-gap: 10px;
 }
 
-.keyboard .row-5 {
-    display: grid;
+.desktop-keyboard .row-5 {
     grid-template-columns: 1.5fr 1fr 1fr 1fr 6fr 1fr 1fr 1fr 1.5fr;
     grid-column-gap: 10px;
+}
+
+.mobile-keyboard .row-1 {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-column-gap: 3px;
+}
+
+.mobile-keyboard .row-2 {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-column-gap: 3px;
+}
+
+.mobile-keyboard .row-3 {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-column-gap: 3px;
+}
+
+.mobile-keyboard .row-4 {
+    grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1.5fr;
+    grid-column-gap: 3px;
+}
+
+.mobile-keyboard .row-5 {
+    grid-template-columns: 1.5fr 1.5fr 9fr 1.5fr 1.5fr;
+    grid-column-gap: 3px;
 }
 
 .key {
     background-color: black;
     color: white;
-    border-radius: 10px;
     cursor: pointer;
+}
+
+.desktop-keyboard .key {
     padding: 20px 0;
+    border-radius: 10px;
+}
+
+.mobile-keyboard .key {
+    padding: 5px;
+    border-radius: 5px;
 }
 
 .key .kh-label {
     text-align: center;
-    font-size: 24px;
     font-weight: bold;
+}
+
+.desktop-keyboard .key .kh-label {
+    font-size: 24px;
+}
+
+.mobile-keyboard .key .kh-label {
+    font-size: 20px;
 }
 
 .key:hover {
@@ -69,7 +135,7 @@ body {
 
 .text-input-container {
     width: 100%;
-    margin: 1rem 0;
+    margin: .5rem 0;
 }
 
 .text-input {
@@ -84,7 +150,15 @@ body {
 }
 
 @media only screen and (max-width: 600px) {
-    .keyboard {
+    .desktop-keyboard.keyboard {
+        display: none;
+    }
+
+    .mobile-keyboard.keyboard {
+        display: grid;
+    }
+
+    /* .keyboard {
         grid-row-gap: 2px;
         padding: .2rem;
     }
@@ -116,5 +190,5 @@ body {
 
     .keyboard .row-5 {
         grid-column-gap: 2px;
-    }
+    } */
 }
